@@ -10,6 +10,7 @@ function ActionLink() {
     console.log("The link was clicked.");
   }
   return (
+    // eslint-disable-next-line
     <a href="#" onClick={handleClick}>
       Click me
     </a>

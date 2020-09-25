@@ -74,6 +74,7 @@ export default Tick;
 
 //!数据是向下流动的 
 // 不管是父组件或是子组件都无法知道某个组件是有状态的还是无状态的，并且它们也并不关心它是函数组件还是 class 组件,这就是为什么称 state 为局部的或是封装的的原因。除了拥有并设置了它的组件，其他组件都无法访问,组件可以选择把它的 state 作为 props 向下传递到它的子组件中
+// eslint-disable-next-line
 {/* <h2>It is {this.state.date.toLocaleTimeString()}.</h2> */}
 
 // 这通常会被叫做“自上而下”或是“单向”的数据流。任何的 state 总是所属于特定的组件，而且从该 state 派生的任何数据或 UI 只能影响树中“低于”它们的组件

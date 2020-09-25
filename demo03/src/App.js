@@ -7,8 +7,26 @@ import Tick from "./components/Tick";
 import { ActionLink, Toggle } from "./components/Event";
 import { Greeting, LoginControl, Mailbox, Page } from "./components/IF";
 import { ListKey, NumberList, Blog } from "./components/ListKey";
-import { NameForm, EssayForm, FlavorForm ,Reservation} from "./components/From";
-import {Basic} from './components/Formik'
+import {
+  NameForm,
+  EssayForm,
+  FlavorForm,
+  Reservation,
+} from "./components/From";
+import { Basic } from "./components/Formik";
+// eslint-disable-next-line
+import {
+  BoilingVerdict,
+  Calculator,
+  TemperatureInput,
+} from "./components/BoilingVerdict";
+import {
+  WelcomeDialog,
+  AppSplitPane,
+  WelcomeDialog2,
+  SignUpDialog,
+} from "./components/Composition";
+import { FilterableProductTable } from "./components/Finsh";
 
 function App() {
   const comment = {
@@ -33,12 +51,61 @@ function App() {
     },
   ];
 
+  const PRODUCTS = [
+    {
+      category: "Sporting Goods",
+      price: "$49.99",
+      stocked: true,
+      name: "Football",
+    },
+    {
+      category: "Sporting Goods",
+      price: "$9.99",
+      stocked: true,
+      name: "Baseball",
+    },
+    {
+      category: "Sporting Goods",
+      price: "$29.99",
+      stocked: false,
+      name: "Basketball",
+    },
+    {
+      category: "Electronics",
+      price: "$99.99",
+      stocked: true,
+      name: "iPod Touch",
+    },
+    {
+      category: "Electronics",
+      price: "$399.99",
+      stocked: false,
+      name: "iPhone 5",
+    },
+    {
+      category: "Electronics",
+      price: "$199.99",
+      stocked: true,
+      name: "Nexus 7",
+    },
+  ];
   return (
     <div className="App">
+      <FilterableProductTable products={PRODUCTS} />
+      <hr/>
+      <SignUpDialog />
+      <WelcomeDialog2 />
+      <AppSplitPane />
+      <WelcomeDialog />
+      {/* <TemperatureInput/> */}
+      <Calculator />
+      <hr></hr>
+      <hr></hr>
+      <BoilingVerdict celsius={101} />
       {/* <input value={null} />
       <input value="hi" /> */}
-      <Basic/>
-      <Reservation/>
+      <Basic />
+      <Reservation />
       <hr></hr>
       <FlavorForm />
       <hr></hr>
