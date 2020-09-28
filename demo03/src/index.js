@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import Super from './Super'
+// import {Context} from './Context'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -10,6 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     <Super/>
+    {/* <Context/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
